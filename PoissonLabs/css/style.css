@@ -311,7 +311,6 @@ p {
     drop-shadow(0 10px 25px rgba(0,0,0,0.06));
 }
 
-/* BLUE swish colour only */
 .logo::after {
   content: "λ";
   position: absolute;
@@ -339,29 +338,111 @@ p {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
+  /* 🔥 switch to vertical movement */
   background-size: 200% 100%;
-  animation: sweepLeftToRight 6s linear infinite;
+  animation: sweepLeftRight 6s linear infinite;
 }
 
-
-/* BLUE SWISH moving left to right */
-
-@keyframes sweepLeftToRight {
+@keyframes sweepLeftRight {
   0% {
     background-position: 200% 0;
     opacity: 0;
   }
 
-  5% {
-    opacity: 1;
+  10% {
+    opacity: 0.9;
   }
 
-  95% {
-    opacity: 1;
+  90% {
+    opacity: 0.9;
   }
 
   100% {
     background-position: -200% 0;
     opacity: 0;
   }
+}
+
+
+
+/* Home page drop down menu */
+.nav {
+  position: fixed;
+  top: 22px;
+  left: 26px;
+  right: 26px; /* allows right alignment */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+
+/* dropdown container pushed right */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* button style */
+.dropbtn {
+  background: transparent;
+  border: 1px solid rgba(0,0,0,0.15);
+  padding: 8px 14px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  cursor: pointer;
+  color: #2b2f36;
+  transition: background 0.2s ease;
+}
+
+.dropbtn:hover {
+  background: rgba(0,0,0,0.05);
+}
+
+/* dropdown box */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  margin-top: 10px;
+  min-width: 180px;
+  background: rgba(255,255,255,0.9);
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  overflow: hidden;
+}
+
+/* links */
+.dropdown-content a {
+  display: block;
+  padding: 10px 14px;
+  text-decoration: none;
+  color: #2b2f36;
+  font-size: 14px;
+}
+
+.dropdown-content a:hover {
+  background: rgba(0,0,0,0.05);
+}
+
+/* show on hover */
+.dropdown:hover .dropdown-content,
+.dropdown-content:hover {
+  display: block;
+}
+
+/* top left lambda logo formatting*/
+.brand {
+  font-size: 22px;
+  font-weight: 300;
+  color: #2b2f36;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.brand:hover {
+  opacity: 0.7;
 }
