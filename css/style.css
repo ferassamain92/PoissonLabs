@@ -1,0 +1,448 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Roboto", sans-serif;
+
+  background: linear-gradient(
+    180deg,
+    #f8fafc 0%,
+    #eef2f6 25%,
+    #e3e8ef 55%,
+    #d7dde6 100%
+  );
+
+  background-attachment: fixed;
+  color: #1a1a1a;
+}
+
+/* =========================
+   GRID BACKGROUND
+========================= */
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0,0,0,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,0,0,0.04) 1px, transparent 1px);
+  background-size: 140px 140px;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* =========================
+   NAV
+========================= */
+
+.nav {
+  position: fixed;
+  top: 22px;
+  left: 26px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  z-index: 10;
+}
+
+.nav a {
+  color: #4b5563;
+  text-decoration: none;
+}
+
+.back {
+  font-size: 14px;
+  padding: 6px 10px;
+  border-radius: 8px;
+}
+
+.back:hover {
+  background: rgba(0,0,0,0.05);
+}
+
+.brand {
+  font-size: 22px;
+  font-weight: 300;
+}
+
+/* =========================
+   GLOBAL LAYOUT
+========================= */
+
+section {
+  padding: 50px 24px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 72px;
+  font-weight: 400;
+  color: #111827;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: rgba(0,0,0,0.65);
+  max-width: 700px;
+  margin: 18px auto 0;
+}
+
+/* =========================
+   ABOUT TAGLINE
+========================= */
+
+.about-tagline {
+  font-size: 18px;
+  font-weight: 300;
+  max-width: 800px;
+  margin: 10px auto 30px;
+}
+
+/* =========================
+   SOLUTIONS GRID CLICKABLE
+========================= */
+
+.service-card {
+  display: flex;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  justify-content: center;
+  width: max-width;
+  text-align: center;
+  padding: 10px;
+  border-radius: 14px;
+  border: 1px solid rgba(0,0,0,0.08);
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(10px);
+
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(59,130,246,0.35);
+}
+
+.ribbon-section.solutions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* =========================
+   HOW IT WORKS (FIXED + CENTERED)
+========================= */
+
+.ribbon-section.how {
+  width: 100%;
+  padding: 50px 24px;
+  text-align: center;
+}
+
+.ribbon-section.solutions h1 {
+  font-size: 30px; /* smaller than default 72px */
+}
+
+.ribbon-section.solutions p {
+  font-size: 16px;
+  max-width: 650px;
+}
+
+/* true centered container */
+.how-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* flow row */
+.three-node-flow.full {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 30px;
+  margin-top: 50px;
+  width: 100%;
+}
+
+/* bubbles */
+.big-bubble {
+  width: 320px;
+  flex: 0 0 auto;
+  padding: 30px;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.75);
+  border: 1px solid rgba(0,0,0,0.08);
+  backdrop-filter: blur(10px);
+}
+
+/* center system */
+.big-bubble.center {
+  border-color: rgba(59,130,246,0.35);
+  background: rgba(59,130,246,0.05);
+}
+
+/* right system */
+.big-bubble.right {
+  border-color: rgba(120,120,120,0.25);
+  background: rgba(0,0,0,0.02);
+}
+
+/* titles */
+.title {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+/* roles */
+.role {
+  font-size: 12px;
+  color: rgba(0,0,0,0.55);
+  margin: 6px 0;
+}
+
+/* description */
+.desc {
+  font-size: 13px;
+  line-height: 1.6;
+  color: rgba(0,0,0,0.65);
+}
+
+/* mini pills */
+.mini-system {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.mini {
+  font-size: 12px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.85);
+  border: 1px solid rgba(0,0,0,0.08);
+}
+
+/* arrows */
+.arrow {
+  font-size: 22px;
+  color: rgba(0,0,0,0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =========================
+   CTA
+========================= */
+
+.cta {
+  margin-top: 80px;
+  padding: 36px;
+  border-radius: 16px;
+  border: 1px solid rgba(0,0,0,0.08);
+  background: rgba(255,255,255,0.6);
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 12px 18px;
+  border-radius: 10px;
+  border: 1px solid rgba(59,130,246,0.4);
+  text-decoration: none;
+  color: #111827;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 900px) {
+  .three-node-flow.full {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+/* LAMBDA logo */
+
+.logo {
+  font-size: 220px;
+  font-weight: 300;
+  line-height: 1;
+  position: relative;
+  display: inline-block;
+
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #eef1f4 35%,
+    #bfc7d1 55%,
+    #8a93a0 75%,
+    #eef1f4 100%
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  filter:
+    drop-shadow(0 1px 1px rgba(255,255,255,0.35))
+    drop-shadow(0 10px 25px rgba(0,0,0,0.06));
+}
+
+.logo::after {
+  content: "λ";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    transparent 38%,
+
+    rgba(255,255,255,0.0) 42%,
+    rgba(220,235,255,0.20) 46%,
+
+    rgba(120,170,230,0.55) 48%,
+    rgba(80,150,255,0.95) 50%,
+    rgba(60,140,255,1) 52%,
+    rgba(80,150,255,0.95) 54%,
+
+    rgba(220,235,255,0.20) 56%,
+    rgba(255,255,255,0.0) 60%,
+
+    transparent 100%
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* 🔥 switch to vertical movement */
+  background-size: 200% 100%;
+  animation: sweepLeftRight 6s linear infinite;
+}
+
+@keyframes sweepLeftRight {
+  0% {
+    background-position: 200% 0;
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 0.9;
+  }
+
+  90% {
+    opacity: 0.9;
+  }
+
+  100% {
+    background-position: -200% 0;
+    opacity: 0;
+  }
+}
+
+
+
+/* Home page drop down menu */
+.nav {
+  position: fixed;
+  top: 22px;
+  left: 26px;
+  right: 26px; /* allows right alignment */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+
+/* dropdown container pushed right */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* button style */
+.dropbtn {
+  background: transparent;
+  border: 1px solid rgba(0,0,0,0.15);
+  padding: 8px 14px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  cursor: pointer;
+  color: #2b2f36;
+  transition: background 0.2s ease;
+}
+
+.dropbtn:hover {
+  background: rgba(0,0,0,0.05);
+}
+
+/* dropdown box */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  margin-top: 10px;
+  min-width: 180px;
+  background: rgba(255,255,255,0.9);
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  overflow: hidden;
+}
+
+/* links */
+.dropdown-content a {
+  display: block;
+  padding: 10px 14px;
+  text-decoration: none;
+  color: #2b2f36;
+  font-size: 14px;
+}
+
+.dropdown-content a:hover {
+  background: rgba(0,0,0,0.05);
+}
+
+/* show on hover */
+.dropdown:hover .dropdown-content,
+.dropdown-content:hover {
+  display: block;
+}
+
+/* top left lambda logo formatting*/
+.brand {
+  font-size: 22px;
+  font-weight: 300;
+  color: #2b2f36;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.brand:hover {
+  opacity: 0.7;
+}
