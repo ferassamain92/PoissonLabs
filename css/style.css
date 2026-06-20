@@ -586,3 +586,114 @@ p {
     width: 100%;
   max-width: 500px;
 }
+
+
+/* =========================
+   MOBILE FIX PATCH
+========================= */
+
+@media (max-width: 768px) {
+
+  /* prevent horizontal scroll bugs */
+  html, body {
+    overflow-x: hidden;
+  }
+
+  /* HERO */
+  .hero {
+    height: auto;
+    padding: 120px 20px 80px;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  .hero-text {
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 34px;
+    line-height: 1.2;
+  }
+
+  /* LAMBDA LOGO */
+  .logo {
+    font-size: 140px;
+  }
+
+  /* NAV */
+  .nav {
+    padding: 0 16px;
+    height: 56px;
+  }
+
+  .nav .dropbtn {
+    font-size: 16px;
+  }
+
+  .brand {
+    font-size: 20px;
+  }
+
+  /* BOTTOM BAR */
+  .bottom {
+    height: 56px;
+    padding: 0 10px;
+  }
+
+  .contact {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  /* GLOBAL TEXT */
+  h1 {
+    font-size: 34px !important;
+  }
+
+  p {
+    font-size: 15px;
+    padding: 0 10px;
+  }
+
+  /* SERVICE CARDS */
+  .service-card {
+    width: 100% !important;
+    max-width: 100%;
+    padding: 16px;
+  }
+
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* HOW IT WORKS FLOW */
+  .three-node-flow.full {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .big-bubble {
+    width: 100%;
+  }
+
+  .arrow {
+    transform: rotate(90deg);
+  }
+
+  /* PILARS */
+  .pillars {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  /* spacing cleanup */
+  section {
+    padding: 40px 16px;
+  }
+}
