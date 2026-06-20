@@ -30,6 +30,12 @@ body {
 
   background-attachment: fixed;
   color: #1a1a1a;
+  
+  padding-top: 0px;
+}
+
+.page-content {
+  padding-top: 100px;
 }
 
 /* =========================
@@ -192,6 +198,10 @@ p {
 /* =========================
    HOW IT WORKS (FIXED + CENTERED)
 ========================= */
+
+.ribbon-section.about p {
+  max-width: min(1400px, 90vw);
+}
 
 .ribbon-section.how {
   width: 100%;
@@ -438,7 +448,7 @@ p {
 
 /* home page recentre*/
 .hero {
-   margin-top: 60px;
+   margin-top: 20px;
   height: calc(100vh - 140px);
 
   display: flex;
@@ -695,5 +705,13 @@ p {
   /* spacing cleanup */
   section {
     padding: 40px 16px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .ribbon-section.about p {
+    max-width: 100%;
+    padding: 0 10px;
   }
 }
