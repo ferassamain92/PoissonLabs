@@ -13,14 +13,21 @@
 <body>
 
 <div class="nav">
+
   <a class="brand" href="index.html">λ</a>
-  <a class="back" href="about.html">Back</a>
-      <div class="dropdown-content">
+
+  <div class="dropdown">
+	<button class="dropbtn" onclick="toggleDropdown(event)">
+	  Poisson Labs
+	</button>
+
+    <div class="dropdown-content">
       <a href="about.html">About Us</a>
       <a href="#offer">What We Offer</a>
       <a href="#contact">Contact</a>
     </div>
   </div>
+
 </div>
 
 <section>
@@ -101,6 +108,23 @@
 </div>
 
 </section>
+
+
+<script>
+function toggleDropdown(event) {
+  event.stopPropagation();
+
+  const menu = document.querySelector(".dropdown-content");
+  menu.classList.toggle("show");
+}
+
+// close when clicking outside
+document.addEventListener("click", function () {
+  const menu = document.querySelector(".dropdown-content");
+  menu.classList.remove("show");
+});
+</script>
+
 
 </body>
 </html>
