@@ -33,6 +33,10 @@ body {
   padding-top: 0px;
 }
 
+body.index {
+  overflow: hidden;
+}
+
 .page-content {
   padding-top: 100px;
 }
@@ -41,7 +45,7 @@ body {
    GRID BACKGROUND
 ========================= */
 
-body::before {
+body.about::before {
   content: "";
   position: fixed;
   inset: 0;
@@ -51,6 +55,7 @@ body::before {
   background-size: 140px 140px;
   opacity: 0.5;
   pointer-events: none;
+  z-index: -1;
 }
 
 /* =========================
@@ -159,6 +164,15 @@ p {
 
 .ribbon-section {
   position: relative;
+  background: #ffffff;
+}
+
+body.about .ribbon-section:nth-of-type(even) {
+  background: #f5f9ff;
+}
+
+body.about .ribbon-section {
+  background: #ffffff;
 }
 
 .ribbon-section + .ribbon-section {
@@ -582,16 +596,16 @@ p {
 ========================= */
 
 .hero {
-  margin-top: 20px;
-  height: calc(100vh - 140px);
+  margin-top: 0;
+  height: calc(100vh - 60px);
   display: flex;
   justify-content: center;
   align-items: center;
   background: linear-gradient(
     180deg,
-    #eef2f6 0%,
-    #e3e8ef 50%,
-    #d7dde6 100%
+    #eef6ff 0%,
+    #e3ecf8 50%,
+    #d6e2f3 100%
   );
 }
 
