@@ -20,17 +20,10 @@ body {
   min-height: 100vh;
   font-family: "Roboto", sans-serif;
 
-  background: linear-gradient(
-    180deg,
-    #f8fafc 0%,
-    #eef2f6 25%,
-    #e3e8ef 55%,
-    #d7dde6 100%
-  );
+  background: #ffffff;
 
-  background-attachment: fixed;
   color: #1a1a1a;
-  padding-top: 0px;
+  padding-top: 0;
 }
 
 body.index {
