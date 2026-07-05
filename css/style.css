@@ -831,9 +831,8 @@ body.about .ribbon-section {
   }
 
   .hero {
-    height: auto;
-    padding: 120px 20px 0px;
-	padding-bottom: 120px;
+    height: calc(100vh - 56px);
+    padding: 0;
   }
 
   .hero-content {
