@@ -832,7 +832,7 @@ body.about .ribbon-section {
 
   .hero {
     height: auto;
-    padding: 120px 20px 80px;
+    padding: 120px 20px 0px;
   }
 
   .hero-content {
