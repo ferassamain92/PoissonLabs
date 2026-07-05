@@ -223,7 +223,7 @@ body.about .ribbon-section {
   display: flex;
   justify-content: center;
   gap: 24px;
-  max-width: 1100px;
+  max-width: max;
   margin: 40px auto 0;
   padding: 0 40px;
 }
@@ -268,9 +268,9 @@ body.about .ribbon-section {
 }
 
 .pillar h3 {
-  text-align: left;
+  text-align: center;
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 600;
   margin-bottom: 18px;
   color: #111827;
 }
