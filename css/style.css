@@ -200,7 +200,7 @@ body.about .ribbon-section {
 ========================= */
 
 .ribbon-section.about {
-  padding-bottom: 60px;
+  padding-bottom: 10px;
 }
 
 .ribbon-section.about h1 {
@@ -210,7 +210,7 @@ body.about .ribbon-section {
 .about-tagline {
   font-size: 18px;
   font-weight: 300;
-  max-width: 600px;
+  max-width: 500px;
   margin: 16px auto 40px;
   color: rgba(0,0,0,0.6);
 }
@@ -300,12 +300,29 @@ body.about .ribbon-section {
 }
 
 /* =========================
+   Inquire for more button
+========================= */
+
+.inquire-indicator {
+  display: inline-block;
+  margin-top: 60px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(59,130,246,0.25);
+  background: rgba(59,130,246,0.06);
+  color: #3b82f6;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+
+/* =========================
    MISSION SECTION
 ========================= */
 
 .mission-section {
   background: rgba(248,250,252,0.6);
-  padding: 80px 40px;
+  padding: 10px 40px;
 }
 
 .mission-inner {
@@ -331,13 +348,6 @@ body.about .ribbon-section {
   margin: 12px 0 20px;
 }
 
-.mission-body {
-  font-size: 16px;
-  line-height: 1.8;
-  color: rgba(0,0,0,0.65);
-  margin: 0;
-  max-width: none;
-}
 
 .mission-quote-box {
   flex: 1;
@@ -380,7 +390,7 @@ body.about .ribbon-section {
 ========================= */
 
 .ribbon-section.benefits {
-  padding: 80px 40px;
+  padding: 50px 40px;
 }
 
 .why-grid {
