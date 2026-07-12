@@ -117,9 +117,12 @@ body.about::before {
 }
 
 .brand {
+  font-family: "Roboto", sans-serif;
   font-size: 25px;
-  font-weight: 400;
+  font-weight: 300;
+  line-height: 1;
   color: #000;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.06);
   text-decoration: none;
   cursor: pointer;
 }
@@ -265,6 +268,8 @@ body.about .ribbon-section {
   align-items: center;
   justify-content: center;
   margin-bottom: 18px;
+
+  
 }
 
 .pillar h3 {
@@ -299,6 +304,27 @@ body.about .ribbon-section {
   font-size: 16px;
 }
 
+
+
+.pillar,
+.why-card,
+.service-card,
+.mission-quote-box {
+  opacity: 0;
+  transform: translateY(25px);
+  transition:
+    opacity 1.3s ease,
+    transform 1.3s ease;
+}
+
+.pillar.show,
+.why-card.show,
+.service-card.show,
+.mission-quote-box.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* =========================
    Inquire for more button
 ========================= */
@@ -306,13 +332,24 @@ body.about .ribbon-section {
 .inquire-indicator {
   display: inline-block;
   margin-top: 60px;
-  padding: 6px 12px;
+  padding: 7px 14px;
   border-radius: 999px;
-  border: 1px solid rgba(59,130,246,0.25);
-  background: rgba(59,130,246,0.06);
-  color: #3b82f6;
-  font-size: 13px;
+  border: 1px solid rgba(37,99,235,0.25);
+  background: rgba(37,99,235,0.05);
+  color: #2563eb;
+  font-size: 11px;
   font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.status-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #2563eb;
+  margin-right: 8px;
 }
 
 
@@ -658,7 +695,7 @@ body.about .ribbon-section {
    BOTTOM BAR
 ========================= */
 
-.bottom {
+.footer {
   position: fixed;
   bottom: 0;
   left: 0;
@@ -878,7 +915,7 @@ body.about .ribbon-section {
     font-size: 20px;
   }
 
-  .bottom {
+  .footer {
     height: 56px;
     padding: 0 10px;
   }
@@ -960,6 +997,96 @@ body.about .ribbon-section {
   }
 }
 
+
+
+/* =========================
+   SERVICES
+========================= */
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    max-width: 1100px;
+    margin: 48px auto 0;
+}
+
+
+.service-card {
+    background: rgba(255,255,255,0.75);
+    border: 1px solid rgba(0,0,0,0.08);
+    border-radius: 18px;
+    padding: 36px;
+    backdrop-filter: blur(10px);
+    text-align: left;
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+
+.service-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(59,130,246,0.25);
+    box-shadow: 0 16px 32px rgba(59,130,246,0.1);
+}
+
+
+.service-card h3 {
+    font-size: 22px;
+    font-weight: 500;
+    color: #111827;
+    margin-bottom: 18px;
+}
+
+
+.service-card p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: rgba(0,0,0,0.65);
+    margin: 0 0 18px;
+    max-width: none;
+}
+
+
+.service-card span {
+    display: block;
+    font-size: 14px;
+    line-height: 1.6;
+    color: rgba(0,0,0,0.5);
+    font-style: italic;
+}
+
+
+/* Mobile */
+
+@media(max-width:768px){
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 10px;
+    }
+
+    .service-card {
+        padding: 28px 22px;
+    }
+
+    .service-card h3 {
+        font-size: 19px;
+    }
+
+}
+
+
+@media(max-width:768px){
+    .services-grid{
+        grid-template-columns:1fr;
+        gap:20px;
+    }
+}
+
 /* =========================
    LEARN MORE BUTTON
 ========================= */
@@ -1032,3 +1159,37 @@ body.about .ribbon-section {
   }
 
 }
+
+
+
+
+/* =========================
+   MOBILE LEARN MORE BUTTON
+========================= */
+
+@media (max-width: 768px) {
+
+  .learn-more {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: auto;
+    min-width: 150px;
+
+    padding: 13px 32px;
+    margin-top: 28px;
+
+    border-radius: 999px;
+    font-size: 15px;
+    letter-spacing: 0.02em;
+  }
+
+  /* Services page buttons */
+  .service-card .learn-more {
+    margin-top: 24px;
+    padding: 12px 28px;
+  }
+
+}
+
